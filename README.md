@@ -13,7 +13,8 @@ This project demonstrates a complete workflow for analyzing Illumina short-read 
 * **Reference mapping & visualization**
 * **Assembly quality assessment**
 
-Dataset: [SRR8185317](https://www.ncbi.nlm.nih.gov/sra/?term=SRR8185317) (*E. coli*).
+Dataset: [SRR8185317](https://www.ncbi.nlm.nih.gov/sra/?term=SRR8185317) (*E. coli*) /
+Reference genome: [NZ_MT158477.1](https://www.ncbi.nlm.nih.gov/nuccore/NZ_MT158477.1?report=fasta)
 
 ---
 
@@ -112,4 +113,5 @@ pip3 install numpy matplotlib
 * Place input FASTQ files into `input_data/`
 * Follow step-by-step commands in `Commends_Rabiee.pdf`
 * Results appear in respective folders
+
 
