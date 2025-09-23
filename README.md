@@ -89,8 +89,8 @@ Project1/
 ### 1. Clone repo
 
 ```bash
-git clone https://github.com/<your-username>/Project1.git
-cd Project1
+git clone https://github.com/AsalRb/Read-Mapping-and-Genome-Assembly.git
+cd Read-Mapping-and-Genome-Assembly
 ```
 
 ### 2. Install dependencies
