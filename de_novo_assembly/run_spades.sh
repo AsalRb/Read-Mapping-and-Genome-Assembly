@@ -1,0 +1,10 @@
+set -e
+true
+true
+/usr/libexec/spades/spades-core /home/asal/Project1/de_novo_assembly/K21/configs/config.info /home/asal/Project1/de_novo_assembly/K21/configs/isolate_mode.info
+/usr/libexec/spades/spades-core /home/asal/Project1/de_novo_assembly/K33/configs/config.info /home/asal/Project1/de_novo_assembly/K33/configs/isolate_mode.info
+/usr/libexec/spades/spades-core /home/asal/Project1/de_novo_assembly/K55/configs/config.info /home/asal/Project1/de_novo_assembly/K55/configs/isolate_mode.info
+/usr/bin/python3 /usr/share/spades/spades_pipeline/scripts/copy_files.py /home/asal/Project1/de_novo_assembly/K55/before_rr.fasta /home/asal/Project1/de_novo_assembly/before_rr.fasta /home/asal/Project1/de_novo_assembly/K55/assembly_graph_after_simplification.gfa /home/asal/Project1/de_novo_assembly/assembly_graph_after_simplification.gfa /home/asal/Project1/de_novo_assembly/K55/final_contigs.fasta /home/asal/Project1/de_novo_assembly/contigs.fasta /home/asal/Project1/de_novo_assembly/K55/first_pe_contigs.fasta /home/asal/Project1/de_novo_assembly/first_pe_contigs.fasta /home/asal/Project1/de_novo_assembly/K55/strain_graph.gfa /home/asal/Project1/de_novo_assembly/strain_graph.gfa /home/asal/Project1/de_novo_assembly/K55/scaffolds.fasta /home/asal/Project1/de_novo_assembly/scaffolds.fasta /home/asal/Project1/de_novo_assembly/K55/scaffolds.paths /home/asal/Project1/de_novo_assembly/scaffolds.paths /home/asal/Project1/de_novo_assembly/K55/assembly_graph_with_scaffolds.gfa /home/asal/Project1/de_novo_assembly/assembly_graph_with_scaffolds.gfa /home/asal/Project1/de_novo_assembly/K55/assembly_graph.fastg /home/asal/Project1/de_novo_assembly/assembly_graph.fastg /home/asal/Project1/de_novo_assembly/K55/final_contigs.paths /home/asal/Project1/de_novo_assembly/contigs.paths
+true
+/usr/bin/python3 /usr/share/spades/spades_pipeline/scripts/breaking_scaffolds_script.py --result_scaffolds_filename /home/asal/Project1/de_novo_assembly/scaffolds.fasta --misc_dir /home/asal/Project1/de_novo_assembly/misc --threshold_for_breaking_scaffolds 3
+true

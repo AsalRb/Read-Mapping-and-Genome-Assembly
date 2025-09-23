@@ -1,0 +1,31 @@
+Command line: /usr/libexec/spades/spades.py	-s	/home/asal/Project1/input_data/SRR8185317_1.fastq	-o	/home/asal/Project1/de_novo_assembly	--threads	4	--isolate	
+
+System information:
+  SPAdes version: 3.15.5
+  Python version: 3.12.3
+  OS: Linux-6.8.0-51-generic-x86_64-with-glibc2.39
+
+Output dir: /home/asal/Project1/de_novo_assembly
+Mode: ONLY assembling (without read error correction)
+Debug mode is turned OFF
+
+Dataset parameters:
+  Isolate mode
+  Reads:
+    Library number: 1, library type: single
+      left reads: not specified
+      right reads: not specified
+      interlaced reads: not specified
+      single reads: ['/home/asal/Project1/input_data/SRR8185317_1.fastq']
+      merged reads: not specified
+Assembly parameters:
+  k: automatic selection based on read length
+  Repeat resolution is enabled
+  Mismatch careful mode is turned OFF
+  MismatchCorrector will be SKIPPED
+  Coverage cutoff is turned OFF
+Other parameters:
+  Dir for temp files: /home/asal/Project1/de_novo_assembly/tmp
+  Threads: 4
+  Memory limit (in Gb): 3
+

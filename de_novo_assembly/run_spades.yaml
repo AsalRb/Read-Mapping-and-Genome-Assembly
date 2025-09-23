@@ -1,0 +1,100 @@
+- STAGE: Before start
+  args: []
+  config_dir: ''
+  del_after: []
+  output_files: []
+  path: 'true'
+  short_name: before_start
+- STAGE: Assembling
+  args: []
+  config_dir: ''
+  del_after: []
+  output_files: []
+  path: 'true'
+  short_name: as_start
+- STAGE: K21
+  args:
+  - /home/asal/Project1/de_novo_assembly/K21/configs/config.info
+  - /home/asal/Project1/de_novo_assembly/K21/configs/isolate_mode.info
+  config_dir: K21
+  del_after: []
+  output_files: []
+  path: /usr/libexec/spades/spades-core
+  short_name: k21
+- STAGE: K33
+  args:
+  - /home/asal/Project1/de_novo_assembly/K33/configs/config.info
+  - /home/asal/Project1/de_novo_assembly/K33/configs/isolate_mode.info
+  config_dir: K33
+  del_after: []
+  output_files: []
+  path: /usr/libexec/spades/spades-core
+  short_name: k33
+- STAGE: K55
+  args:
+  - /home/asal/Project1/de_novo_assembly/K55/configs/config.info
+  - /home/asal/Project1/de_novo_assembly/K55/configs/isolate_mode.info
+  config_dir: K55
+  del_after: []
+  output_files: []
+  path: /usr/libexec/spades/spades-core
+  short_name: k55
+- STAGE: Copy files
+  args:
+  - /usr/share/spades/spades_pipeline/scripts/copy_files.py
+  - /home/asal/Project1/de_novo_assembly/K55/before_rr.fasta
+  - /home/asal/Project1/de_novo_assembly/before_rr.fasta
+  - /home/asal/Project1/de_novo_assembly/K55/assembly_graph_after_simplification.gfa
+  - /home/asal/Project1/de_novo_assembly/assembly_graph_after_simplification.gfa
+  - /home/asal/Project1/de_novo_assembly/K55/final_contigs.fasta
+  - /home/asal/Project1/de_novo_assembly/contigs.fasta
+  - /home/asal/Project1/de_novo_assembly/K55/first_pe_contigs.fasta
+  - /home/asal/Project1/de_novo_assembly/first_pe_contigs.fasta
+  - /home/asal/Project1/de_novo_assembly/K55/strain_graph.gfa
+  - /home/asal/Project1/de_novo_assembly/strain_graph.gfa
+  - /home/asal/Project1/de_novo_assembly/K55/scaffolds.fasta
+  - /home/asal/Project1/de_novo_assembly/scaffolds.fasta
+  - /home/asal/Project1/de_novo_assembly/K55/scaffolds.paths
+  - /home/asal/Project1/de_novo_assembly/scaffolds.paths
+  - /home/asal/Project1/de_novo_assembly/K55/assembly_graph_with_scaffolds.gfa
+  - /home/asal/Project1/de_novo_assembly/assembly_graph_with_scaffolds.gfa
+  - /home/asal/Project1/de_novo_assembly/K55/assembly_graph.fastg
+  - /home/asal/Project1/de_novo_assembly/assembly_graph.fastg
+  - /home/asal/Project1/de_novo_assembly/K55/final_contigs.paths
+  - /home/asal/Project1/de_novo_assembly/contigs.paths
+  config_dir: ''
+  del_after:
+  - .bin_reads
+  - tmp/spades_nww2gw6r
+  output_files: []
+  path: /usr/bin/python3
+  short_name: copy_files
+- STAGE: Assembling
+  args: []
+  config_dir: ''
+  del_after: []
+  output_files: []
+  path: 'true'
+  short_name: as_finish
+- STAGE: Breaking scaffolds
+  args:
+  - /usr/share/spades/spades_pipeline/scripts/breaking_scaffolds_script.py
+  - --result_scaffolds_filename
+  - /home/asal/Project1/de_novo_assembly/scaffolds.fasta
+  - --misc_dir
+  - /home/asal/Project1/de_novo_assembly/misc
+  - --threshold_for_breaking_scaffolds
+  - '3'
+  config_dir: ''
+  del_after: []
+  output_files: []
+  path: /usr/bin/python3
+  short_name: bs
+- STAGE: Terminate
+  args: []
+  config_dir: ''
+  del_after:
+  - configs
+  output_files: []
+  path: 'true'
+  short_name: terminate
