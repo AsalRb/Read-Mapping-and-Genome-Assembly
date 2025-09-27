@@ -30,7 +30,7 @@ Project1/
 │
 ├── Code_of_plots_partA.R                # R scripts for quality/read length plots
 ├── Bioinformatics Project 1_Asal Rabiee.pdf  # Full report & answers 
-├── Commends_Rabiee.pdf                  # Step-by-step commands & pipeline
+└── Commends_Rabiee.pdf                  # Step-by-step commands & pipeline
 ```
 
 ---
